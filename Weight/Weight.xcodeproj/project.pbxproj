@@ -208,10 +208,34 @@
 		CEAFEBF725ECCE1E00261EB4 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFEC0425ECCFBF00261EB4 /* Model */,
+				CEAFEC0325ECCFB800261EB4 /* ViewModel */,
+				CEAFEC0225ECCFB400261EB4 /* View */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		CEAFEC0225ECCFB400261EB4 /* View */ = {
+			isa = PBXGroup;
+			children = (
 				CEAFEBF825ECCE2800261EB4 /* Data.storyboard */,
 				CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */,
 			);
-			path = Data;
+			path = View;
+			sourceTree = "<group>";
+		};
+		CEAFEC0325ECCFB800261EB4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		CEAFEC0425ECCFBF00261EB4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
