@@ -12,7 +12,6 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
 
     let imagePicker: UIImagePickerController = UIImagePickerController()
     var isFirstTime: Bool = true
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -20,16 +19,14 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.mediaTypes = [kUTTypeImage as String]
         imagePicker.allowsEditing = false
     }
-    
     override func viewDidAppear(_ animated: Bool) {
         if isFirstTime {
             presentCameraView()
             isFirstTime = false
         }
     }
-    
     func presentCameraView() {
-        if(UIImagePickerController.isSourceTypeAvailable(.camera)) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
             present(imagePicker, animated: false, completion: nil)
         }
     }
