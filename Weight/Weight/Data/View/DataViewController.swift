@@ -35,8 +35,9 @@ extension DataViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let weightInfoCell = weightTableView.dequeueReusableCell(withIdentifier: "WeightInfoCell", for: indexPath) as? WeightInfoCell else { return UITableViewCell() }
         
-        dataViewModel.setWeightInfo(withDataIndex: indexPath.row) { weight in
-            weightInfoCell.amountLabel.text = "\(String(weight.amount))KG"
+        dataViewModel.setWeightInfo(withDataIndex: indexPath.row) { amount, date in
+            weightInfoCell.amountLabel.text = "\(amount)KG"
+            weightInfoCell.dateLabel.text = "\(date)"
         }
         
         return weightInfoCell
