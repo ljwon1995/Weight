@@ -20,7 +20,7 @@ class DataViewModel {
         self.weightDataListener = listener
     }
     
-    //TODO: Test Code
+    // TODO: Test Code
     func fetchAllData() {
         setDummyData()
     }
