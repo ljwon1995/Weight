@@ -7,18 +7,28 @@
 
 import UIKit
 
-class DataViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class DataViewController: UIViewController {
+    
+    @IBOutlet weak var weightTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        weightTableView.dataSource = self
+        weightTableView.delegate = self
     }
+}
+
+extension DataViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        1
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        return weightTableView.dequeueReusableCell(withIdentifier: "WeightCell", for: indexPath)
     }
+}
+
+extension DataViewController: UITableViewDelegate {
+    
 }
