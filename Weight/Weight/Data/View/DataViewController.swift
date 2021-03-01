@@ -9,26 +9,37 @@ import UIKit
 
 class DataViewController: UIViewController {
     
+    let dataViewModel = DataViewModel()
+    
     @IBOutlet weak var weightTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         weightTableView.dataSource = self
-        weightTableView.delegate = self
+        
+        dataViewModel.setListenerToWeightData {
+            self.weightTableView.reloadData()
+        }
+        
+        dataViewModel.fetchAllData()
     }
 }
 
 extension DataViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return dataViewModel.totalDataNumber()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return weightTableView.dequeueReusableCell(withIdentifier: "WeightCell", for: indexPath)
+        guard let weightInfoCell = weightTableView.dequeueReusableCell(withIdentifier: "WeightInfoCell", for: indexPath) as? WeightInfoCell else { return UITableViewCell() }
+        
+        dataViewModel.setWeightInfo(withDataIndex: indexPath.row) { amount, date in
+            weightInfoCell.amountLabel.text = "\(amount)KG"
+            weightInfoCell.dateLabel.text = "\(date)"
+        }
+        
+        return weightInfoCell
     }
-}
-
-extension DataViewController: UITableViewDelegate {
-    
 }
