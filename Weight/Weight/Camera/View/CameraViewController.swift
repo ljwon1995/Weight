@@ -11,7 +11,8 @@ import MobileCoreServices
 class CameraViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     let imagePicker: UIImagePickerController = UIImagePickerController()
-    var isFirstTime: Bool = true
+    var isAppearFirst: Bool = true
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -19,15 +20,25 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         imagePicker.mediaTypes = [kUTTypeImage as String]
         imagePicker.allowsEditing = false
     }
+    
     override func viewDidAppear(_ animated: Bool) {
-        if isFirstTime {
+        if isAppearFirst {
             presentCameraView()
-            isFirstTime = false
+            isAppearFirst = false
+        } else {
+            presentDataView()
         }
     }
+    
     func presentCameraView() {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             present(imagePicker, animated: false, completion: nil)
         }
+    }
+    
+    func presentDataView() {
+        let dataStoryboard = UIStoryboard(name: "Data", bundle: nil)
+        let dataViewController = dataStoryboard.instantiateViewController(identifier: "Data")
+        self.navigationController?.pushViewController(dataViewController, animated: true)
     }
 }

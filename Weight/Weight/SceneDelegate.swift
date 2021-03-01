@@ -13,6 +13,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let _ = (scene as? UIWindowScene) else { return }
+        let cameraStoryboard = UIStoryboard(name: "Camera", bundle: nil)
+        let cameraViewController = cameraStoryboard.instantiateViewController(identifier: "camera")
+        
+        let rootViewController = UINavigationController(rootViewController: cameraViewController)
+        window?.rootViewController = rootViewController
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
