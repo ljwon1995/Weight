@@ -17,6 +17,8 @@
 		CEAFEB8B25ECA1C500261EB4 /* WeightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB8A25ECA1C500261EB4 /* WeightUITests.swift */; };
 		CEAFEBBE25ECA86900261EB4 /* Camera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAFEBBD25ECA86900261EB4 /* Camera.storyboard */; };
 		CEAFEBC325ECA88000261EB4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEBC225ECA88000261EB4 /* CameraViewController.swift */; };
+		CEAFEBF925ECCE2800261EB4 /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAFEBF825ECCE2800261EB4 /* Data.storyboard */; };
+		CEAFEBFE25ECCE3300261EB4 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */; };
 		D0EA8C132F379AEA665EC554 /* Pods_Weight_WeightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DA61A551CD1EBE5150AC4E /* Pods_Weight_WeightUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		CEAFEB8C25ECA1C500261EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEAFEBBD25ECA86900261EB4 /* Camera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Camera.storyboard; sourceTree = "<group>"; };
 		CEAFEBC225ECA88000261EB4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		CEAFEBF825ECCE2800261EB4 /* Data.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Data.storyboard; sourceTree = "<group>"; };
+		CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
 		D8DC947AEB568A8419A09CDF /* Pods_WeightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -139,6 +143,7 @@
 		CEAFEB6725ECA1C100261EB4 /* Weight */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFEBF725ECCE1E00261EB4 /* Data */,
 				CEAFEBB925ECA80800261EB4 /* Camera */,
 				CEAFEB6825ECA1C100261EB4 /* AppDelegate.swift */,
 				CEAFEB6A25ECA1C100261EB4 /* SceneDelegate.swift */,
@@ -198,6 +203,15 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		CEAFEBF725ECCE1E00261EB4 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				CEAFEBF825ECCE2800261EB4 /* Data.storyboard */,
+				CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -307,6 +321,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAFEBF925ECCE2800261EB4 /* Data.storyboard in Resources */,
 				CEAFEB7525ECA1C400261EB4 /* LaunchScreen.storyboard in Resources */,
 				CEAFEBBE25ECA86900261EB4 /* Camera.storyboard in Resources */,
 				CEAFEB7225ECA1C400261EB4 /* Assets.xcassets in Resources */,
@@ -420,6 +435,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAFEBFE25ECCE3300261EB4 /* DataViewController.swift in Sources */,
 				CEAFEB6925ECA1C100261EB4 /* AppDelegate.swift in Sources */,
 				CEAFEB6B25ECA1C100261EB4 /* SceneDelegate.swift in Sources */,
 				CEAFEBC325ECA88000261EB4 /* CameraViewController.swift in Sources */,

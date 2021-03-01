@@ -25,6 +25,8 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if isAppearFirst {
             presentCameraView()
             isAppearFirst = false
+        } else {
+            presentDataView()
         }
     }
     
@@ -32,5 +34,11 @@ class CameraViewController: UIViewController, UIImagePickerControllerDelegate, U
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
             present(imagePicker, animated: false, completion: nil)
         }
+    }
+    
+    func presentDataView() {
+        let dataStoryboard = UIStoryboard(name: "Data", bundle: nil)
+        let dataViewController = dataStoryboard.instantiateViewController(identifier: "Data")
+        self.navigationController?.pushViewController(dataViewController, animated: true)
     }
 }
