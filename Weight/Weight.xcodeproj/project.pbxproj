@@ -19,6 +19,9 @@
 		CEAFEBC325ECA88000261EB4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEBC225ECA88000261EB4 /* CameraViewController.swift */; };
 		CEAFEBF925ECCE2800261EB4 /* Data.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAFEBF825ECCE2800261EB4 /* Data.storyboard */; };
 		CEAFEBFE25ECCE3300261EB4 /* DataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */; };
+		CEAFEC0F25ECDC3200261EB4 /* Weight.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEC0E25ECDC3200261EB4 /* Weight.swift */; };
+		CEAFEC1425ECDD2A00261EB4 /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEC1325ECDD2A00261EB4 /* DataViewModel.swift */; };
+		CEAFEC1925ECE1F100261EB4 /* WeightInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEC1825ECE1F100261EB4 /* WeightInfoCell.swift */; };
 		D0EA8C132F379AEA665EC554 /* Pods_Weight_WeightUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0DA61A551CD1EBE5150AC4E /* Pods_Weight_WeightUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -64,6 +67,9 @@
 		CEAFEBC225ECA88000261EB4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CEAFEBF825ECCE2800261EB4 /* Data.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Data.storyboard; sourceTree = "<group>"; };
 		CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewController.swift; sourceTree = "<group>"; };
+		CEAFEC0E25ECDC3200261EB4 /* Weight.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weight.swift; sourceTree = "<group>"; };
+		CEAFEC1325ECDD2A00261EB4 /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		CEAFEC1825ECE1F100261EB4 /* WeightInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightInfoCell.swift; sourceTree = "<group>"; };
 		D8DC947AEB568A8419A09CDF /* Pods_WeightTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WeightTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -220,6 +226,7 @@
 			children = (
 				CEAFEBF825ECCE2800261EB4 /* Data.storyboard */,
 				CEAFEBFD25ECCE3300261EB4 /* DataViewController.swift */,
+				CEAFEC1825ECE1F100261EB4 /* WeightInfoCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +234,7 @@
 		CEAFEC0325ECCFB800261EB4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFEC1325ECDD2A00261EB4 /* DataViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -234,6 +242,7 @@
 		CEAFEC0425ECCFBF00261EB4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				CEAFEC0E25ECDC3200261EB4 /* Weight.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -459,7 +468,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEAFEC0F25ECDC3200261EB4 /* Weight.swift in Sources */,
 				CEAFEBFE25ECCE3300261EB4 /* DataViewController.swift in Sources */,
+				CEAFEC1425ECDD2A00261EB4 /* DataViewModel.swift in Sources */,
+				CEAFEC1925ECE1F100261EB4 /* WeightInfoCell.swift in Sources */,
 				CEAFEB6925ECA1C100261EB4 /* AppDelegate.swift in Sources */,
 				CEAFEB6B25ECA1C100261EB4 /* SceneDelegate.swift in Sources */,
 				CEAFEBC325ECA88000261EB4 /* CameraViewController.swift in Sources */,
