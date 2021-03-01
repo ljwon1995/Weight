@@ -22,7 +22,7 @@ class DataViewController: UIViewController {
             self.weightTableView.reloadData()
         }
         
-        dataViewModel.setDummyData()
+        dataViewModel.fetchAllData()
     }
 }
 

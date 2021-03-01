@@ -20,6 +20,11 @@ class DataViewModel {
         self.weightDataListener = listener
     }
     
+    //TODO: Test Code
+    func fetchAllData() {
+        setDummyData()
+    }
+    
     func setDummyData() {
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
