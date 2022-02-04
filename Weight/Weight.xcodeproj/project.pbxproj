@@ -9,12 +9,13 @@
 /* Begin PBXBuildFile section */
 		CEAFEB6925ECA1C100261EB4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB6825ECA1C100261EB4 /* AppDelegate.swift */; };
 		CEAFEB6B25ECA1C100261EB4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB6A25ECA1C100261EB4 /* SceneDelegate.swift */; };
-		CEAFEB6D25ECA1C100261EB4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB6C25ECA1C100261EB4 /* ViewController.swift */; };
-		CEAFEB7025ECA1C100261EB4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAFEB6E25ECA1C100261EB4 /* Main.storyboard */; };
+		CEAFEB6D25ECA1C100261EB4 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB6C25ECA1C100261EB4 /* CameraViewController.swift */; };
 		CEAFEB7225ECA1C400261EB4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEAFEB7125ECA1C400261EB4 /* Assets.xcassets */; };
 		CEAFEB7525ECA1C400261EB4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEAFEB7325ECA1C400261EB4 /* LaunchScreen.storyboard */; };
 		CEAFEB8025ECA1C500261EB4 /* WeightTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB7F25ECA1C500261EB4 /* WeightTests.swift */; };
 		CEAFEB8B25ECA1C500261EB4 /* WeightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB8A25ECA1C500261EB4 /* WeightUITests.swift */; };
+		CECCCD9527AD6A5300B21EBF /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCCD9427AD6A5300B21EBF /* CameraView.swift */; };
+		CECCCD9727AD75B100B21EBF /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCCD9627AD75B100B21EBF /* CaptureSessionManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +39,7 @@
 		CEAFEB6525ECA1C100261EB4 /* Weight.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Weight.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAFEB6825ECA1C100261EB4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEAFEB6A25ECA1C100261EB4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CEAFEB6C25ECA1C100261EB4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		CEAFEB6F25ECA1C100261EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEAFEB6C25ECA1C100261EB4 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		CEAFEB7125ECA1C400261EB4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CEAFEB7425ECA1C400261EB4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CEAFEB7625ECA1C400261EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +49,8 @@
 		CEAFEB8625ECA1C500261EB4 /* WeightUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeightUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEAFEB8A25ECA1C500261EB4 /* WeightUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightUITests.swift; sourceTree = "<group>"; };
 		CEAFEB8C25ECA1C500261EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CECCCD9427AD6A5300B21EBF /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		CECCCD9627AD75B100B21EBF /* CaptureSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,11 +103,12 @@
 			children = (
 				CEAFEB6825ECA1C100261EB4 /* AppDelegate.swift */,
 				CEAFEB6A25ECA1C100261EB4 /* SceneDelegate.swift */,
-				CEAFEB6C25ECA1C100261EB4 /* ViewController.swift */,
-				CEAFEB6E25ECA1C100261EB4 /* Main.storyboard */,
+				CEAFEB6C25ECA1C100261EB4 /* CameraViewController.swift */,
 				CEAFEB7125ECA1C400261EB4 /* Assets.xcassets */,
 				CEAFEB7325ECA1C400261EB4 /* LaunchScreen.storyboard */,
 				CEAFEB7625ECA1C400261EB4 /* Info.plist */,
+				CECCCD9427AD6A5300B21EBF /* CameraView.swift */,
+				CECCCD9627AD75B100B21EBF /* CaptureSessionManager.swift */,
 			);
 			path = Weight;
 			sourceTree = "<group>";
@@ -233,7 +236,6 @@
 			files = (
 				CEAFEB7525ECA1C400261EB4 /* LaunchScreen.storyboard in Resources */,
 				CEAFEB7225ECA1C400261EB4 /* Assets.xcassets in Resources */,
-				CEAFEB7025ECA1C100261EB4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +260,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CEAFEB6D25ECA1C100261EB4 /* ViewController.swift in Sources */,
+				CEAFEB6D25ECA1C100261EB4 /* CameraViewController.swift in Sources */,
 				CEAFEB6925ECA1C100261EB4 /* AppDelegate.swift in Sources */,
+				CECCCD9727AD75B100B21EBF /* CaptureSessionManager.swift in Sources */,
 				CEAFEB6B25ECA1C100261EB4 /* SceneDelegate.swift in Sources */,
+				CECCCD9527AD6A5300B21EBF /* CameraView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +300,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		CEAFEB6E25ECA1C100261EB4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				CEAFEB6F25ECA1C100261EB4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		CEAFEB7325ECA1C400261EB4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
