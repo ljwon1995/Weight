@@ -10,6 +10,7 @@ import UIKit
 class CameraViewController: UIViewController {
     
     private let captureSessionManager = CaptureSessionManager()
+    private let weightDetector = WeightDetector()
     
     private var cameraView: CameraView {
         get {
@@ -27,7 +28,7 @@ class CameraViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        captureSessionManager.setUpSession()
+        captureSessionManager.setUpSession(delegate: weightDetector)
         cameraView.captureSession = captureSessionManager.session
     }
     
@@ -39,7 +40,17 @@ class CameraViewController: UIViewController {
         }, onConfigurationFailed: {
             self.presentConfigErrorAlert()
         })
+        
+        
     
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        weightDetector.detectWeight(onSuccess: { weight in
+            DispatchQueue.main.async {
+                self.cameraView.label.text = weight
+            }
+        })
     }
     
     private func presentAuthorizationAlert() {

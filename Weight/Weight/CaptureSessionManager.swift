@@ -16,11 +16,11 @@ class CaptureSessionManager {
         case configurationFailed
     }
     
+    private let sessionQueue = DispatchQueue(label: "session queue")
+    
+    private var sessionSetupResult: SessionSetupResult = .success
     
     var session = AVCaptureSession()
-    
-    private let sessionQueue = DispatchQueue(label: "session queue")
-    private var sessionSetupResult: SessionSetupResult = .success
     
     func startCapture(onNotAuthorized: @escaping  () -> Void, onConfigurationFailed: @escaping () -> Void) {
         sessionQueue.async {
@@ -36,7 +36,7 @@ class CaptureSessionManager {
         }
     }
     
-    func setUpSession() {
+    func setUpSession(delegate: WeightDetector) {
         
         sessionQueue.async {
             self.checkAndRequestAuthorization()
@@ -59,17 +59,19 @@ class CaptureSessionManager {
             
             self.session.addInput(cameraDeviceInput)
             
-            let photoOutput = AVCapturePhotoOutput()
+            let videoDataOutput = AVCaptureVideoDataOutput()
             
-            guard self.session.canAddOutput(photoOutput) else {
+            videoDataOutput.setSampleBufferDelegate(delegate, queue: delegate.videoQueue)
+            
+            guard self.session.canAddOutput(videoDataOutput) else {
                 self.sessionSetupResult = .configurationFailed
                 return
             }
             
-            self.session.sessionPreset = .medium
+            self.session.sessionPreset = .high
             
-            self.session.addOutput(photoOutput)
-            
+            self.session.addOutput(videoDataOutput)
+
         }
     }
     

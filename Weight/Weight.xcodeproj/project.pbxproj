@@ -16,6 +16,7 @@
 		CEAFEB8B25ECA1C500261EB4 /* WeightUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEAFEB8A25ECA1C500261EB4 /* WeightUITests.swift */; };
 		CECCCD9527AD6A5300B21EBF /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCCD9427AD6A5300B21EBF /* CameraView.swift */; };
 		CECCCD9727AD75B100B21EBF /* CaptureSessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCCD9627AD75B100B21EBF /* CaptureSessionManager.swift */; };
+		CECCCD9927AE9BAF00B21EBF /* WeightDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECCCD9827AE9BAF00B21EBF /* WeightDetector.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		CEAFEB8C25ECA1C500261EB4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CECCCD9427AD6A5300B21EBF /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
 		CECCCD9627AD75B100B21EBF /* CaptureSessionManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaptureSessionManager.swift; sourceTree = "<group>"; };
+		CECCCD9827AE9BAF00B21EBF /* WeightDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightDetector.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 				CEAFEB7625ECA1C400261EB4 /* Info.plist */,
 				CECCCD9427AD6A5300B21EBF /* CameraView.swift */,
 				CECCCD9627AD75B100B21EBF /* CaptureSessionManager.swift */,
+				CECCCD9827AE9BAF00B21EBF /* WeightDetector.swift */,
 			);
 			path = Weight;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				CECCCD9727AD75B100B21EBF /* CaptureSessionManager.swift in Sources */,
 				CEAFEB6B25ECA1C100261EB4 /* SceneDelegate.swift in Sources */,
 				CECCCD9527AD6A5300B21EBF /* CameraView.swift in Sources */,
+				CECCCD9927AE9BAF00B21EBF /* WeightDetector.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,7 +445,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = j.won.app.weight;
+				PRODUCT_BUNDLE_IDENTIFIER = j.won.weight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -463,7 +467,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 0.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = j.won.app.weight;
+				PRODUCT_BUNDLE_IDENTIFIER = j.won.weight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

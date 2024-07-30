@@ -14,6 +14,8 @@ class CameraView: UIView {
         self.layer as! AVCaptureVideoPreviewLayer
     }
     
+    var label: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: 200, height: 200))
+    
     var captureSession: AVCaptureSession? {
         get {
             cameraViewLayer.session
@@ -37,6 +39,12 @@ class CameraView: UIView {
     
     private func commonInit() {
         self.cameraViewLayer.videoGravity = .resizeAspectFill
+        
+        label.text = "Hello World"
+        label.textColor = .white
+        
+        self.addSubview(label)
+        
     }
     
     override class var layerClass: AnyClass {
